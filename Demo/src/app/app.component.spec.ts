@@ -1,32 +1,17 @@
-import { TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
-import { RouterTestingModule } from '@angular/router/testing'; 
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { AppComponent } from "./app.component";
 
+describe('AppComponent', ()=> {
+ let fixture : AppComponent;
 
-describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [AppComponent,RouterTestingModule,HttpClientTestingModule],
-    }).compileComponents();
-  });
+ beforeEach(()=>{
+  fixture = new AppComponent();
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
-
-  it(`should have the 'Demo' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('Demo');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    //expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Demo');
-  });
-});
+})
+it ('should have setup',()=>{
+  expect(fixture.title).toEqual('Demo')
+})
+it('adds 1 + 2 to equal 3 ', ()=>{
+  expect(fixture.sum(1,2)).toBe(3);
+}
+);
+})

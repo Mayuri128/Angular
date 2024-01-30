@@ -14,4 +14,8 @@ import { ProductComponent } from './product/product.component';
 })
 export class AppComponent {
   title = 'Demo';
+
+  sum(a:number, b:number){
+    return a+b;
+  }
 }
