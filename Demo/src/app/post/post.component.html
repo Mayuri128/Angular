@@ -1,0 +1,43 @@
+<div class="min-h-screen flex items-center justify-center">
+<div class="bg-gray-200">
+<div class="relative overflow-x-auto">
+    <table class="w-full text-sm text-left rtl:text-right text-grey-500 dark:text-grey-400">
+<thead>
+    <tr>
+        <th scope="col" class="px-6 py-3">ID</th>
+        <th scope="col" class="px-6 py-3">Title</th>
+        <th scope="col" class="px-6 py-3">Body</th>
+    </tr>
+</thead>
+<tbody>
+    @for(post of posts; track post.id){
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900">{{post.id}}</th>
+       
+        <td class="px-6 py-4" >
+            {{post.title}}
+        </td>
+        <td class="px-6 py-4" >
+            {{post.body}}
+        </td>
+    </tr>
+    }
+    @empty{
+        <h3 class="text-green-500">No posts</h3>
+    }
+</tbody>
+</table>
+</div>
+</div>
+<div class="">
+<button routerLink = "html" class="flex mx-auto text-white bg-yellow-500 border-0 py-2 px-8 focus:outline-none hover:bg-yellow-600 rounded text-lg">contact</button>
+</div>
+</div>
+
+
+
+
+
+
+
+
