@@ -9,12 +9,14 @@ import { SkillsetComponent } from './skillset/skillset.component';
 import { CSSComponent } from './css/css.component';
 import { AngularComponent } from './angular/angular.component';
 import { JavascriptComponent } from './javascript/javascript.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 export const routes: Routes = [
     {path : '',  title:'Home'  ,component : HomeComponent},
     {path : 'about', title:'about',component : AboutComponent},
     {path : 'contact', title:'contact',component : ContactComponent},
     {path : 'SkillSet', title:'skill-Set',component : SkillsetComponent},
+    {path : 'employee', title:'employee',component :EmployeeComponent },
     {path : 'SkillSet', children :[{
         path : 'html', title:'skillset | html', component: HtmlComponent
     }]},

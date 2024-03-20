@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CSSComponent } from './css.component';
+import { Contact2Component } from './contact2.component';
 
-describe('CSSComponent', () => {
-  let component: CSSComponent;
-  let fixture: ComponentFixture<CSSComponent>;
+describe('Contact2Component', () => {
+  let component: Contact2Component;
+  let fixture: ComponentFixture<Contact2Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CSSComponent]
+      imports: [Contact2Component]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(CSSComponent);
+    fixture = TestBed.createComponent(Contact2Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
